@@ -1,0 +1,25 @@
+{
+  "name": "p3_boistard_matthieu",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./style/scss/body.scss:./style/css/body.css ./style/scss/main.scss:./style/css/main.css ./style/scss/header-footer.scss:./style/css/header-footer.css ./style/scss/main-restaurants.scss:./style/css/main-restaurants.css ",
+    "prefix" :"postcss ./style/css/body.css ./style/css/main.css ./style/css/header-footer.css ./style/css/main-restaurants.css --use autoprefixer -d ./style/css/prefixed/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matthieu661/MatthieuBoistard_3_08032020.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "browserslist": "last 4 versions",
+  "bugs": {
+    "url": "https://github.com/matthieu661/MatthieuBoistard_3_08032020/issues"
+  },
+  "homepage": "https://github.com/matthieu661/MatthieuBoistard_3_08032020#readme",
+  "dependencies":
+   {
+    "sass": "^1.32.8"
+  }
+}
