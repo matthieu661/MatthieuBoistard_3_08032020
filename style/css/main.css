@@ -1,3 +1,66 @@
-
+.section_flex-conteneur {
+  border: 1px green solid;
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+.section_flex-conteneur__localisation {
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #f6f6f6;
+}
+.section_flex-conteneur__localisation__zone {
+  display: flex;
+  width: 100%;
+  height: 50px;
+  background-color: #eaeaea;
+  align-items: center;
+  justify-content: center;
+}
+.section_flex-conteneur__localisation__zone p {
+  margin-left: 15px;
+  font-weight: bold;
+}
+.section_flex-conteneur__localisation__fonctionnement {
+  display: flex;
+  flex-direction: column;
+  height: 175px;
+  width: auto;
+  align-items: center;
+  justify-content: center;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+.section_flex-conteneur__localisation__fonctionnement h2 {
+  margin-top: 0;
+  margin-right: 0;
+  text-align: center;
+  font-weight: 1000;
+  font-size: 1.5em;
+}
+.section_flex-conteneur__localisation__fonctionnement p {
+  text-align: center;
+  font-size: 1em;
+}
+.section_flex-conteneur__localisation__bouton-violet {
+  display: flex;
+  height: 112px;
+  width: auto;
+  justify-content: center;
+  margin-top: 39px;
+}
+.section_flex-conteneur__localisation__bouton-violet-buton {
+  height: 50px;
+  width: 220px;
+  border-radius: 25px;
+  border: none;
+  background: linear-gradient(to bottom right, #f682e5, #913fcf);
+  color: white;
+  font-size: 1em;
+  font-weight: 500;
+}
 
 /*# sourceMappingURL=main.css.map */
