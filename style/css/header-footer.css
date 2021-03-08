@@ -1,5 +1,40 @@
-.test {
+header {
+  width: 100%;
+  height: 65px;
+  margin: 5px;
+}
+header .header__flex {
   display: flex;
+  height: 100%;
+}
+header .header__flex .header__flex--retour {
+  height: 100%;
+  width: auto;
+  flex-grow: 0;
+}
+header .header__flex .header__flex--retour i {
+  display: block;
+  height: auto;
+  width: auto;
+  margin-top: 23px;
+  margin-bottom: 12px;
+  margin-left: 21px;
+  margin-right: 15px;
+  font-size: 1.3em;
+}
+header .header__flex .header__flex--titre {
+  width: 100%;
+  height: 100%;
+  flex-grow: 1;
+}
+header .header__flex .header__flex--titre img {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 12px;
+  margin-top: 20px;
+  display: block;
+  height: auto;
+  width: auto;
 }
 
 /*# sourceMappingURL=header-footer.css.map */

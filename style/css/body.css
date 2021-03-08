@@ -1,5 +1,20 @@
-.test {
-  display: flex;
+.titre {
+  font-family: "Shrikhand", cursive;
+}
+
+.text {
+  font-family: "Roboto", sans-serif;
+}
+
+@media screen and (max-width: 650px) {
+  body {
+    display: flex;
+    justify-content: center;
+    margin :0;
+    width: 375px;
+    border: aqua 2px solid;
+    
+  }
 }
 
 /*# sourceMappingURL=body.css.map */
