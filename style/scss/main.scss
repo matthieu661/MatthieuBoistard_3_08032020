@@ -1,21 +1,56 @@
 
 $background-localisation: rgb(234, 234, 234);
-$background-fonctionnement : rgb(246, 246, 246);
-$background-bouton : linear-gradient(to bottom right,rgb(246, 130, 229), rgb(145, 63, 207) ); ;
+$background-gris--claire : rgb(246, 246, 246); 
+$background-purple : rgb(245, 237, 255) ;
+$color-icon-fonctionnement :rgb(126, 126, 126);
+$color-icon-fonctionnement-2 : rgb(173, 114, 153);
+$background-bouton : linear-gradient(to bottom right,rgb(246, 130, 229), rgb(145, 63, 207) );
 
 
-.section_flex-conteneur {
+@mixin buton_violet {
+
+    height: 50px;
+    width: 220px;
+    border-radius: 25px;
+    border :none ;
+    background : $background-bouton;
+    color: white;
+    font-size: 1em;
+    font-weight: 500;
+    
+}
+@mixin list_rond {
+    background:$color-icon-fonctionnement-2;
+    border-radius: 50%;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    margin-right: -11px;
+    color: white;
+    z-index: 1;
+}
+@mixin titre {
+    margin-left: 21px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    border: solid 1px red;   
+}
+
+
+.flex-conteneur {
     border: 1px green solid;
     width: auto;
     height: auto;
     display: flex;
     flex-direction: column;
+    /* Section 1 : localisation ########################################################### */
     &__localisation {
         height: auto;
         width: 100%;
         display: flex;
         flex-direction: column;
-        background-color: $background-fonctionnement;
+        background-color: $background-gris--claire;
         &__zone{
             display: flex;
             width: 100%;
@@ -29,7 +64,7 @@ $background-bouton : linear-gradient(to bottom right,rgb(246, 130, 229), rgb(145
             }
             
         }
-        &__fonctionnement {
+        &__text {
             display: flex;
             flex-direction: column;
             height: 175px;
@@ -58,19 +93,83 @@ $background-bouton : linear-gradient(to bottom right,rgb(246, 130, 229), rgb(145
             justify-content: center;
             margin-top: 39px;
             &-buton {
-                height: 50px;
-                width: 220px;
-                border-radius: 25px;
-                border :none ;
-                background : $background-bouton;
-                color: white;
-                font-size: 1em;
-                font-weight: 500;
+                @include buton_violet;
+            }
+        } 
+    }    
+    /* Section 2 : fonctionnement ########################################################### */
+    &__fonctionnement {
+        display: flex;
+        flex-direction: column;
+        height: 440px;
+        width: 100%;
+        border: green 1px solid;
 
+        h2 {
+            @include titre;
+        }
+        ol {
+            counter-reset: nombre;
+            margin-left: -20px;
+        }
+        li {
+            list-style-type: none;
+            counter-increment: nombre;
+            display: flex;
+            align-items: center;
+            margin-bottom: 24px;
+        }
+        li:before {
+            content: counter(nombre);
+            @include list_rond;
+            
+        }
+        &--icone-text {
+            width: 325px;
+            height: 75px;
+            border-radius: 25px;
+            background:$background-gris--claire;
+            display: flex;
+            align-items: center;
+                i {
+                    margin-left: 40px;
+                    margin-right: 25px;
+                    font-size: 1.3em;
+                    color: $color-icon-fonctionnement;
+                }   
+                p {
+                    font-size: 1em;
+                    font-weight: bold;
+                }
+        }
+        .background-purple {
+            background:$background-purple;
+                i {
+                    color: $color-icon-fonctionnement-2;
+                }
+        }
+    }
+    &__restaurants {
+        background: $background-gris--claire ;
+        &--titre {
+            @include titre ;
+        }
+        &__carte {
+            width: 335px;
+            height: 250px;
+            &--image {
+                width: 335px;
+                height: 175px;
+                
+                object-fit: cover;
+                img {
+                    
+                }
             }
         }
-    }    
 
+
+    }
     
          
     

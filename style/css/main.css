@@ -1,18 +1,20 @@
-.section_flex-conteneur {
+.flex-conteneur {
   border: 1px green solid;
   width: auto;
   height: auto;
   display: flex;
   flex-direction: column;
+  /* Section 1 : localisation ########################################################### */
+  /* Section 2 : fonctionnement ########################################################### */
 }
-.section_flex-conteneur__localisation {
+.flex-conteneur__localisation {
   height: auto;
   width: 100%;
   display: flex;
   flex-direction: column;
   background-color: #f6f6f6;
 }
-.section_flex-conteneur__localisation__zone {
+.flex-conteneur__localisation__zone {
   display: flex;
   width: 100%;
   height: 50px;
@@ -20,11 +22,11 @@
   align-items: center;
   justify-content: center;
 }
-.section_flex-conteneur__localisation__zone p {
+.flex-conteneur__localisation__zone p {
   margin-left: 15px;
   font-weight: bold;
 }
-.section_flex-conteneur__localisation__fonctionnement {
+.flex-conteneur__localisation__text {
   display: flex;
   flex-direction: column;
   height: 175px;
@@ -34,25 +36,25 @@
   margin-left: 40px;
   margin-right: 40px;
 }
-.section_flex-conteneur__localisation__fonctionnement h2 {
+.flex-conteneur__localisation__text h2 {
   margin-top: 0;
   margin-right: 0;
   text-align: center;
   font-weight: 1000;
   font-size: 1.5em;
 }
-.section_flex-conteneur__localisation__fonctionnement p {
+.flex-conteneur__localisation__text p {
   text-align: center;
   font-size: 1em;
 }
-.section_flex-conteneur__localisation__bouton-violet {
+.flex-conteneur__localisation__bouton-violet {
   display: flex;
   height: 112px;
   width: auto;
   justify-content: center;
   margin-top: 39px;
 }
-.section_flex-conteneur__localisation__bouton-violet-buton {
+.flex-conteneur__localisation__bouton-violet-buton {
   height: 50px;
   width: 220px;
   border-radius: 25px;
@@ -61,6 +63,84 @@
   color: white;
   font-size: 1em;
   font-weight: 500;
+}
+.flex-conteneur__fonctionnement {
+  display: flex;
+  flex-direction: column;
+  height: 440px;
+  width: 100%;
+  border: green 1px solid;
+}
+.flex-conteneur__fonctionnement h2 {
+  margin-left: 21px;
+  margin-top: 50px;
+  margin-bottom: 30px;
+  border: solid 1px red;
+}
+.flex-conteneur__fonctionnement ol {
+  counter-reset: nombre;
+  margin-left: -20px;
+}
+.flex-conteneur__fonctionnement li {
+  list-style-type: none;
+  counter-increment: nombre;
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+}
+.flex-conteneur__fonctionnement li:before {
+  content: counter(nombre);
+  background: #ad7299;
+  border-radius: 50%;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  margin-right: -11px;
+  color: white;
+  z-index: 1;
+}
+.flex-conteneur__fonctionnement--icone-text {
+  width: 325px;
+  height: 75px;
+  border-radius: 25px;
+  background: #f6f6f6;
+  display: flex;
+  align-items: center;
+}
+.flex-conteneur__fonctionnement--icone-text i {
+  margin-left: 40px;
+  margin-right: 25px;
+  font-size: 1.3em;
+  color: #7e7e7e;
+}
+.flex-conteneur__fonctionnement--icone-text p {
+  font-size: 1em;
+  font-weight: bold;
+}
+.flex-conteneur__fonctionnement .background-purple {
+  background: #f5edff;
+}
+.flex-conteneur__fonctionnement .background-purple i {
+  color: #ad7299;
+}
+.flex-conteneur__restaurants {
+  background: #f6f6f6;
+}
+.flex-conteneur__restaurants--titre {
+  margin-left: 21px;
+  margin-top: 50px;
+  margin-bottom: 30px;
+  border: solid 1px red;
+}
+.flex-conteneur__restaurants__carte {
+  width: 335px;
+  height: 250px;
+}
+.flex-conteneur__restaurants__carte--image {
+  width: 335px;
+  height: 175px;
+  object-fit: cover;
 }
 
 /*# sourceMappingURL=main.css.map */
