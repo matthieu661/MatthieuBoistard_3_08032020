@@ -1,9 +1,12 @@
 
+
 $background-localisation: rgb(234, 234, 234);
 $background-gris--claire : rgb(246, 246, 246); 
 $background-purple : rgb(245, 237, 255) ;
 $color-icon-fonctionnement :rgb(126, 126, 126);
 $color-icon-fonctionnement-2 : rgb(173, 114, 153);
+$background-nouveau : rgb(153, 226, 208);
+$color-nouveau: rgb(12, 138, 106);
 $background-bouton : linear-gradient(to bottom right,rgb(246, 130, 229), rgb(145, 63, 207) );
 
 
@@ -16,9 +19,12 @@ $background-bouton : linear-gradient(to bottom right,rgb(246, 130, 229), rgb(145
     background : $background-bouton;
     color: white;
     font-size: 1em;
-    font-weight: 500;
-    
+    font-weight: 500;  
 }
+@mixin box-shadow-bas {
+    box-shadow: 0px 6px 7px rgb(202, 202, 202);
+    }  
+
 @mixin list_rond {
     background:$color-icon-fonctionnement-2;
     border-radius: 50%;
@@ -33,13 +39,19 @@ $background-bouton : linear-gradient(to bottom right,rgb(246, 130, 229), rgb(145
 @mixin titre {
     margin-left: 21px;
     margin-top: 50px;
-    margin-bottom: 30px;
-    border: solid 1px red;   
+    margin-bottom: 30px;  
 }
 
+@keyframes heart{
+    from {
+        transform: scaleX(0);   
+    }
+    to {
+        transform: scaleX(1);
+    }
+}
 
 .flex-conteneur {
-    border: 1px green solid;
     width: auto;
     height: auto;
     display: flex;
@@ -61,8 +73,7 @@ $background-bouton : linear-gradient(to bottom right,rgb(246, 130, 229), rgb(145
             p {
                 margin-left: 15px;
                 font-weight:bold;
-            }
-            
+            }   
         }
         &__text {
             display: flex;
@@ -94,6 +105,7 @@ $background-bouton : linear-gradient(to bottom right,rgb(246, 130, 229), rgb(145
             margin-top: 39px;
             &-buton {
                 @include buton_violet;
+                @include box-shadow-bas;
             }
         } 
     }    
@@ -103,8 +115,6 @@ $background-bouton : linear-gradient(to bottom right,rgb(246, 130, 229), rgb(145
         flex-direction: column;
         height: 440px;
         width: 100%;
-        border: green 1px solid;
-
         h2 {
             @include titre;
         }
@@ -131,6 +141,7 @@ $background-bouton : linear-gradient(to bottom right,rgb(246, 130, 229), rgb(145
             background:$background-gris--claire;
             display: flex;
             align-items: center;
+            @include box-shadow-bas;
                 i {
                     margin-left: 40px;
                     margin-right: 25px;
@@ -149,24 +160,112 @@ $background-bouton : linear-gradient(to bottom right,rgb(246, 130, 229), rgb(145
                 }
         }
     }
+    /* Section 3 : restaurants ########################################################### */
     &__restaurants {
         background: $background-gris--claire ;
+        display: flex;
+        flex-direction: column;
         &--titre {
             @include titre ;
         }
+        h2{
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+        &__porte-carte {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+        &--margin {
+            height: 50px;
+            width: 100%;
+        }
         &__carte {
+            
             width: 335px;
             height: 250px;
+            margin-bottom: 12px;
             &--image {
                 width: 335px;
                 height: 175px;
                 
-                object-fit: cover;
                 img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border-top-left-radius: 20px;
+                    border-top-right-radius: 20px;
+                }
+                &--nouveau {
+                    width: 80px;
+                    height: 30px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background: $background-nouveau;
+                    color: $color-nouveau;
+                    position: relative;
+                    top:-160px; left: 235px;
+                    z-index: 1;
+                    border-radius: 2px;
+                }
+            }
+            &--description {
+                height: 75px;
+                width: 335px;
+                background: white;
+                display: flex;
+                border-bottom-left-radius: 20px;
+                border-bottom-right-radius: 20px;
+                @include box-shadow-bas;
+                &--nom-restaurants {
+                    height: 100%;
+                    width: auto;
+                    flex-grow: 1;
+                    h4 {
+                        margin-left: 15px;
+                        margin-top: 15px;
+                        margin-bottom: 5px;
+                        font-size: 1.1em;
+                    }
+                    p {
+                        margin-left: 15px;
+                    }
+                }
+                &--like {
+                    display: flex;
+                    align-items: center;
+                    margin-right: 22px;
+                    button {
+                        height: 40px;
+                        border: none;
+                        background-color: white;
+                        cursor: pointer;
+                        .fas {
+                            position: relative;
+                            left: 20px;
+                            transform: scale(0);
+                            transform-origin: bottom;
+                            transition: 600ms;   
+                        }
+                        &:active .fas {
+                            transform: scale(1);
+                            background: -webkit-gradient(linear, left top, left bottom, from(rgb(168, 105, 223)), to(rgb(248, 212, 244)));
+                            -webkit-background-clip: text;
+                            -webkit-text-fill-color: transparent;
+                            z-index: 1;     
+                        }
+                    }
+                    i {
+                        font-size: 1.5em;
+                    }
+                    
                     
                 }
             }
         }
+        
 
 
     }

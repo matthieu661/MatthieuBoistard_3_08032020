@@ -34,7 +34,47 @@ header .header__flex .header__flex--titre img {
   margin-top: 20px;
   display: block;
   height: auto;
-  width: auto;
+  width: 60%;
+}
+
+footer {
+  height: 200px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #353535;
+}
+footer .footer__logo {
+  height: auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+footer .footer__logo h3 {
+  color: white;
+  font-family: Shrikhand;
+  font-weight: lighter;
+  margin-left: 25px;
+  margin-top: 25px;
+}
+footer ul {
+  list-style: none;
+  margin-left: -15px;
+  margin-top: -5px;
+}
+footer ul .fas {
+  margin-right: 10px;
+}
+footer ul .fa-utensils {
+  font-size: 1.1em;
+}
+footer ul .fa-hands-helping {
+  font-size: 0.7em;
+}
+footer ul p {
+  color: white;
+  margin-top: 6px;
+  font-size: 1.1em;
 }
 
 /*# sourceMappingURL=header-footer.css.map */

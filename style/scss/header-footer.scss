@@ -31,9 +31,50 @@ header{
                 margin-top: 20px;
                 display: block;
                 height: auto;
-                width: auto;
+                width: 60%;
                 
             } 
+        }
+    }
+}
+footer {
+    height: 200px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(53, 53, 53);
+    .footer__logo {
+        height: auto;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        h3 {
+            color: white;
+            font-family: Shrikhand;
+            font-weight: lighter;
+            margin-left: 25px;
+            margin-top: 25px;   
+        }
+    }
+    ul {
+        list-style: none;
+        margin-left: -15px;
+        margin-top: -5px;
+        .fas {
+            margin-right: 10px;
+
+        }
+        .fa-utensils {
+            font-size: 1.1em;
+        }
+        .fa-hands-helping {
+            font-size: 0.7em;
+        }
+        p {
+            color :white;
+            margin-top: 6px;
+            font-size: 1.1em;
+
         }
     }
 }
