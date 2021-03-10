@@ -50,6 +50,9 @@ $background-bouton : linear-gradient(to bottom right,rgb(246, 130, 229), rgb(145
         transform: scaleX(1);
     }
 }
+.header__flex--retour {
+    display: none;
+}
 
 .flex-conteneur {
     width: auto;
@@ -237,9 +240,11 @@ $background-bouton : linear-gradient(to bottom right,rgb(246, 130, 229), rgb(145
                     display: flex;
                     align-items: center;
                     margin-right: 22px;
+                    border: none;
                     button {
                         height: 40px;
-                        border: none;
+                        border: rgba(0, 0, 0, 0);
+                        outline: rgba(0, 0, 0, 0);
                         background-color: white;
                         cursor: pointer;
                         .fas {
@@ -253,9 +258,12 @@ $background-bouton : linear-gradient(to bottom right,rgb(246, 130, 229), rgb(145
                             transform: scale(1);
                             background: -webkit-gradient(linear, left top, left bottom, from(rgb(168, 105, 223)), to(rgb(248, 212, 244)));
                             -webkit-background-clip: text;
+                            background-clip: text;
                             -webkit-text-fill-color: transparent;
-                            z-index: 1;     
+                            z-index: 1;  
+                              
                         }
+                        
                     }
                     i {
                         font-size: 1.5em;

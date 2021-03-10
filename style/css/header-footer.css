@@ -76,5 +76,13 @@ footer ul p {
   margin-top: 6px;
   font-size: 1.1em;
 }
+footer ul a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.3em;
+}
+footer ul li:nth-child(4) {
+  margin-top: 3px;
+}
 
 /*# sourceMappingURL=header-footer.css.map */

@@ -6,6 +6,10 @@
     transform: scaleX(1);
   }
 }
+.header__flex--retour {
+  display: none;
+}
+
 .flex-conteneur {
   width: auto;
   height: auto;
@@ -212,10 +216,12 @@
   display: flex;
   align-items: center;
   margin-right: 22px;
+  border: none;
 }
 .flex-conteneur__restaurants__carte--description--like button {
   height: 40px;
-  border: none;
+  border: rgba(0, 0, 0, 0);
+  outline: rgba(0, 0, 0, 0);
   background-color: white;
   cursor: pointer;
 }
@@ -230,6 +236,7 @@
   transform: scale(1);
   background: -webkit-gradient(linear, left top, left bottom, from(#a869df), to(#f8d4f4));
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   z-index: 1;
 }
