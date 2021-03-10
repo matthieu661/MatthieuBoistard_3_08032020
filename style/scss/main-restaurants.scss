@@ -16,6 +16,7 @@ $background-majeur : rgb(246, 246, 246);
 .flex-conteneur {
     height: auto;
     width: 375px;
+    background-color: $background-majeur  ;
     &__image-nom-restaurant {
         height: auto;
         width: 100%;
@@ -95,6 +96,7 @@ $background-majeur : rgb(246, 246, 246);
         flex-direction: column;
         border :rgb(168, 105, 223) 1px solid;
         background:$background-majeur ;
+        margin-bottom: 15px;
         &--titre {
             h3 {
                 margin-left: 15px;
@@ -121,7 +123,7 @@ $background-majeur : rgb(246, 246, 246);
                 border-radius: 15px;
                 @include box-shadow-bas;
                 :active + .li__animation {
-                    transform: translate(-60px);
+                    transform: translate(-64px);
                     transition: 1500ms;
                     .li__animation--rotate {
                     transform: rotate(360deg);
@@ -141,31 +143,66 @@ $background-majeur : rgb(246, 246, 246);
                 display: flex;
                 flex-direction: column;
                 height: 100%;
-                width: 100%;
-                flex-grow: 1;
+                min-width: 300px;
+                flex-shrink: 1;
+                &:active  p {
+                    transition: 1500ms;
+                    width: 75%;
+                    height: 100%;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+                &:active h5 {
+                    transition: 1500ms;
+                    width: 75%;
+                    height: 100%;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    
+                }
+                
                 h5 {
                     margin-top: 8px;
                     margin-bottom: 6px;
                     margin-left: 8px;
                     font-size: 1.2em;
+                    height: 100%;
+                    width: 100%;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
                 }
                 p {
                     margin-left: 8px;
+                    height: 100%;
+                    width: 100%;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+
                 }
             }
             .li__animation {
                 position: relative;
-                left: 60px;
+                left: -10px;
                 height: 100%;
                 width: 180px;
                 display: flex;
                 align-items: center;
+                margin-left: 10px;
                 
                 p {
                     display: flex;
-                    margin-left: 20px;
+                    height: auto;
+                    width: auto;
+                    margin-left: 0px;
                     margin-right: 14px;
                     margin-top: 20px;
+                    padding-left: 10px;
+                    
+
                 }
                 &--translate {
                     display: flex;
@@ -174,7 +211,7 @@ $background-majeur : rgb(246, 246, 246);
                     border-top-right-radius: 15px;
                     border-bottom-right-radius: 15px;
                     height: 100%;
-                    width: 100%;
+                    width: 60px;
                     color: white;
                     font-size: 1.4em;
                     background: rgb(153, 226, 208);
@@ -186,10 +223,7 @@ $background-majeur : rgb(246, 246, 246);
                     width: 100%;
                     display: flex;
                     align-items: center;
-                    justify-content: center;
-                    
-
-                    
+                    justify-content: center;   
                 }
 
             }
