@@ -178,7 +178,14 @@
 }
 .flex-conteneur__fonctionnement ol {
   counter-reset: nombre;
-  margin-left: -20px;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+@media (max-width: 651px) {
+  .flex-conteneur__fonctionnement ol {
+    margin-left: -50px;
+  }
 }
 @media (min-width: 1151px) {
   .flex-conteneur__fonctionnement ol {
@@ -191,6 +198,7 @@
   counter-increment: nombre;
   display: flex;
   align-items: center;
+  justify-content: center;
   margin-bottom: 24px;
 }
 @media (min-width: 1151px) {

@@ -18,6 +18,10 @@ $background-chargement : radial-gradient(#703386, white);
 @mixin desktop {
     @media (min-width: 1151px) {@content;}
 } 
+@mixin smartphone {
+    @media (max-width: 651px) {@content;}    
+    }
+
 
 @mixin buton_violet {
 
@@ -217,10 +221,17 @@ $background-chargement : radial-gradient(#703386, white);
         }
         ol {
             counter-reset: nombre;
-            margin-left: -20px;
+            justify-content: center;
+            display: flex;
+            flex-direction: column;
+            @include smartphone {
+                margin-left: -50px;
+            }
+
             @include desktop{
                 display: flex;
                 justify-content: center;
+                
             }
         }
         li {
@@ -228,6 +239,7 @@ $background-chargement : radial-gradient(#703386, white);
             counter-increment: nombre;
             display: flex;
             align-items: center;
+            justify-content: center;
             margin-bottom: 24px;
             @include desktop{
                 margin: 10px;
