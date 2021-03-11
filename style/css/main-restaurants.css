@@ -11,6 +11,21 @@
   width: 375px;
   background-color: #f6f6f6;
 }
+@media (min-width: 651px) and (max-width: 1150px) {
+  .flex-conteneur {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: auto;
+  }
+}
+@media (min-width: 1151px) {
+  .flex-conteneur {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
 .flex-conteneur__image-nom-restaurant {
   height: auto;
   width: 100%;
@@ -21,6 +36,16 @@
   height: 220px;
   width: 100%;
   z-index: 1;
+}
+@media (min-width: 651px) and (max-width: 1150px) {
+  .flex-conteneur__image-nom-restaurant--image {
+    height: 280px;
+  }
+}
+@media (min-width: 1151px) {
+  .flex-conteneur__image-nom-restaurant--image {
+    height: 330px;
+  }
 }
 .flex-conteneur__image-nom-restaurant--image img {
   height: 100%;
@@ -85,6 +110,17 @@
   background: #f6f6f6;
   margin-bottom: 15px;
 }
+@media (min-width: 651px) and (max-width: 1150px) {
+  .flex-conteneur__repas {
+    align-items: center;
+  }
+}
+@media (min-width: 1151px) {
+  .flex-conteneur__repas {
+    width: 33%;
+    align-items: center;
+  }
+}
 .flex-conteneur__repas--titre h3 {
   margin-left: 15px;
   font-size: 1em;
@@ -95,7 +131,7 @@
   border-top: #99e2d0 3px solid;
   margin-bottom: 12px;
   margin-left: 15px;
-  width: 45px;
+  width: 42px;
 }
 .flex-conteneur__repas ul {
   list-style: none;

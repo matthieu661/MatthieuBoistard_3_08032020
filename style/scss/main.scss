@@ -9,6 +9,12 @@ $background-nouveau : rgb(153, 226, 208);
 $color-nouveau: rgb(12, 138, 106);
 $background-bouton : linear-gradient(to bottom right,rgb(246, 130, 229), rgb(145, 63, 207) );
 
+@mixin tablette {
+    @media (min-width: 651px) and(max-width : 1150px) {@content;}
+} 
+@mixin desktop {
+    @media (min-width: 1151px) {@content;}
+} 
 
 @mixin buton_violet {
 
@@ -19,7 +25,11 @@ $background-bouton : linear-gradient(to bottom right,rgb(246, 130, 229), rgb(145
     background : $background-bouton;
     color: white;
     font-size: 1em;
-    font-weight: 500;  
+    font-weight: 500;
+    cursor: pointer;
+    &:hover {
+        opacity: 0.7;
+    }  
 }
 @mixin box-shadow-bas {
     box-shadow: 0px 6px 7px rgb(202, 202, 202);
@@ -39,7 +49,8 @@ $background-bouton : linear-gradient(to bottom right,rgb(246, 130, 229), rgb(145
 @mixin titre {
     margin-left: 21px;
     margin-top: 50px;
-    margin-bottom: 30px;  
+    margin-bottom: 30px;
+    
 }
 
 @keyframes heart{
@@ -111,6 +122,16 @@ $background-bouton : linear-gradient(to bottom right,rgb(246, 130, 229), rgb(145
                 @include box-shadow-bas;
             }
         } 
+        .flex-conteneur__localisation__bouton-violet-buton {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            p {
+                color: white;
+            }
+            
+
+        }
     }    
     /* Section 2 : fonctionnement ########################################################### */
     &__fonctionnement {
@@ -118,12 +139,35 @@ $background-bouton : linear-gradient(to bottom right,rgb(246, 130, 229), rgb(145
         flex-direction: column;
         height: 440px;
         width: 100%;
+        @include desktop{
+            height: auto;
+        }
+        
+        &--titre {
+            @include tablette{
+                display: flex;
+                justify-content: center;
+            }
+            @include desktop{
+                display: flex;
+                justify-content: center;
+            }
+        }
+        ol, li {
+            @include tablette {
+                justify-content: center
+            }
+        }
         h2 {
             @include titre;
         }
         ol {
             counter-reset: nombre;
             margin-left: -20px;
+            @include desktop{
+                display: flex;
+                justify-content: center;
+            }
         }
         li {
             list-style-type: none;
@@ -131,6 +175,9 @@ $background-bouton : linear-gradient(to bottom right,rgb(246, 130, 229), rgb(145
             display: flex;
             align-items: center;
             margin-bottom: 24px;
+            @include desktop{
+                margin: 10px;
+            }
         }
         li:before {
             content: counter(nombre);
@@ -170,6 +217,14 @@ $background-bouton : linear-gradient(to bottom right,rgb(246, 130, 229), rgb(145
         flex-direction: column;
         &--titre {
             @include titre ;
+            @include tablette{
+                display: flex;
+                justify-content: center;
+            }
+            @include desktop{
+                display: flex;
+                justify-content: center;
+            }
         }
         h2{
             margin-top: 0;
@@ -179,19 +234,46 @@ $background-bouton : linear-gradient(to bottom right,rgb(246, 130, 229), rgb(145
             display: flex;
             align-items: center;
             flex-direction: column;
+            @include desktop{
+                flex-wrap: wrap;
+                flex-direction: row;
+                justify-content: center;
+                height: auto;
+            }
         }
         &--margin {
-            height: 50px;
+            height: 60px;
             width: 100%;
+            @include desktop{
+                align-self: center;
+            }
         }
         &__carte {
             
             width: 335px;
             height: 250px;
             margin-bottom: 12px;
+            @include tablette{
+                width: 400px;
+                height: 320px;
+            }
+            @include desktop{
+                width: 400px;
+                height: 320px;
+                margin: 15px;
+            }
             &--image {
                 width: 335px;
                 height: 175px;
+                @include tablette{
+                    width: 400px;
+                    height: 230px;
+                }
+                @include desktop{
+                    width: 400px;
+                    height: 230px;
+                    
+                }
                 
                 img {
                     width: 100%;
@@ -212,11 +294,25 @@ $background-bouton : linear-gradient(to bottom right,rgb(246, 130, 229), rgb(145
                     top:-160px; left: 235px;
                     z-index: 1;
                     border-radius: 2px;
+                    @include tablette {
+                        position: relative;
+                        top: -210px; left: 300px;
+                    }
+                    @include desktop {
+                        position: relative;
+                        top: -210px; left: 300px;
+                    }
                 }
             }
             &--description {
                 height: 75px;
                 width: 335px;
+                @include tablette{
+                    width: 400px;
+                }
+                @include desktop{
+                    width: 400px;
+                }
                 background: white;
                 display: flex;
                 border-bottom-left-radius: 20px;

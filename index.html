@@ -20,9 +20,9 @@
     <body>
       <header>
           <div class="header__flex">
-              <div class="header__flex--retour">
+              <a href="index.html"><div class="header__flex--retour">
                 <i class="fas fa-arrow-left"></i>
-              </div>
+              </div></a>
               <div class="header__flex--titre">
                   <img src="img/logo/ohmyfood@2x.svg" alt="logo">
               </div>
@@ -38,11 +38,13 @@
                     <h2>Réservez le menu qui vous convient</h2>
                     <p>Découvrez des restaurants d'exception, séléctionnés par nos soins</p>
                 </div>
-                <div class="flex-conteneur__localisation__bouton-violet">
-                    <form >
-                        <input class="flex-conteneur__localisation__bouton-violet-buton" type="button" value="Explorer nos restaurants">
-                    </form>
-                </div>
+                
+                    <div class="flex-conteneur__localisation__bouton-violet">
+                    
+                        <a href="#ancre"><div class="flex-conteneur__localisation__bouton-violet-buton"><p>Explorer nos restaurants</p>
+                        </div></a>
+                    </div>    
+                
             </section>
             <section class="flex-conteneur__fonctionnement">
                 <div class="flex-conteneur__fonctionnement--titre">
@@ -54,7 +56,7 @@
                     <li> <div class="flex-conteneur__fonctionnement--icone-text background-purple"><i class="fas fa-store"></i><p>Déguster au restaurant</p></div></li>
                 </ol>
             </section>
-            <section class="flex-conteneur__restaurants">
+            <section class="flex-conteneur__restaurants" id="ancre">
                 <div class="flex-conteneur__restaurants--titre">
                     <h2>Restaurants</h2>
                 </div>
@@ -110,23 +112,24 @@
                     </div>
                     </a>
                     <a href="la-palette-du-gout.html">
-                    <div class="flex-conteneur__restaurants__carte">
-                        <div class="flex-conteneur__restaurants__carte--image">
-                            <img src="img/img/restaurant4.jpg" alt="Le délice des sens">
-                        </div>
-                        <div class="flex-conteneur__restaurants__carte--description">
-                            <div class="flex-conteneur__restaurants__carte--description--nom-restaurants">
-                                <h4>Le délice des sens</h4>
-                                <p>Folie-Méricourt</p>
+                        <div class="flex-conteneur__restaurants__carte">
+                            <div class="flex-conteneur__restaurants__carte--image">
+                                <img src="img/img/restaurant4.jpg" alt="Le délice des sens">
                             </div>
-                            <div class="flex-conteneur__restaurants__carte--description--like">
-                                <span  class="heart"><i class="fas fa-heart"></i><i class="far fa-heart"></i></span>
+                            <div class="flex-conteneur__restaurants__carte--description">
+                                <div class="flex-conteneur__restaurants__carte--description--nom-restaurants">
+                                    <h4>Le délice des sens</h4>
+                                    <p>Folie-Méricourt</p>
+                                </div>
+                                <div class="flex-conteneur__restaurants__carte--description--like">
+                                    <span  class="heart"><i class="fas fa-heart"></i><i class="far fa-heart"></i></span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="flex-conteneur__restaurants--margin"></div>   
-                </div>
-                </a>
+                    </a>   
+                    
+                </div>    
+                <div class="flex-conteneur__restaurants--margin"></div>
             </section>
       </div>
       <footer>

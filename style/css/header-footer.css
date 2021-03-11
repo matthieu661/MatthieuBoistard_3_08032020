@@ -3,6 +3,16 @@ header {
   height: 65px;
   margin: 5px;
 }
+@media (min-width: 651px) and (max-width: 1150px) {
+  header {
+    height: auto;
+  }
+}
+@media (min-width: 1151px) {
+  header {
+    height: auto;
+  }
+}
 header .header__flex {
   display: flex;
   height: 100%;
@@ -16,11 +26,21 @@ header .header__flex .header__flex--retour i {
   display: block;
   height: auto;
   width: auto;
-  margin-top: 23px;
+  margin-top: 27px;
   margin-bottom: 12px;
   margin-left: 21px;
   margin-right: 15px;
   font-size: 1.3em;
+}
+@media (min-width: 651px) and (max-width: 1150px) {
+  header .header__flex .header__flex--retour {
+    margin-top: 23px;
+  }
+}
+@media (min-width: 1151px) {
+  header .header__flex .header__flex--retour {
+    margin-top: 30px;
+  }
 }
 header .header__flex .header__flex--titre {
   width: 100%;
@@ -36,6 +56,11 @@ header .header__flex .header__flex--titre img {
   height: auto;
   width: 60%;
 }
+@media (min-width: 1151px) {
+  header .header__flex .header__flex--titre img {
+    width: 45%;
+  }
+}
 
 footer {
   height: 200px;
@@ -44,11 +69,34 @@ footer {
   flex-direction: column;
   background-color: #353535;
 }
+@media (min-width: 1151px) {
+  footer {
+    flex-direction: row;
+  }
+}
+@media (min-width: 651px) and (max-width: 1150px) {
+  footer {
+    flex-direction: row;
+    width: 100%;
+  }
+}
 footer .footer__logo {
   height: auto;
   width: 100%;
   display: flex;
   align-items: center;
+}
+@media (min-width: 1151px) {
+  footer .footer__logo {
+    width: 20%;
+    margin-top: -20px;
+  }
+}
+@media (min-width: 651px) and (max-width: 1150px) {
+  footer .footer__logo {
+    width: 30%;
+    margin-top: -90px;
+  }
 }
 footer .footer__logo h3 {
   color: white;
@@ -61,6 +109,24 @@ footer ul {
   list-style: none;
   margin-left: -15px;
   margin-top: -5px;
+}
+@media (min-width: 1151px) {
+  footer ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  footer ul li {
+    margin-right: 50px;
+  }
+}
+@media (min-width: 651px) and (max-width: 1150px) {
+  footer ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 50px;
+  }
 }
 footer ul .fas {
   margin-right: 10px;
@@ -78,7 +144,7 @@ footer ul p {
 }
 footer ul a {
   text-decoration: none;
-  color: white;
+  color: white !important;
   font-size: 1.3em;
 }
 footer ul li:nth-child(4) {

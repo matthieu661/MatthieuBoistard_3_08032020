@@ -1,7 +1,23 @@
+
+
+@mixin tablette {
+    @media (min-width: 651px) and(max-width : 1150px) {@content;}
+} 
+@mixin desktop {
+    @media (min-width: 1151px) {@content;}
+} 
+
+
 header{
     width: 100%;
     height: 65px;
     margin: 5px;
+    @include tablette {
+        height: auto;           
+    }
+    @include desktop {
+        height: auto;
+    }
     .header__flex{
         display: flex;
         height: 100%;
@@ -13,11 +29,17 @@ header{
                 display: block;
                 height: auto;
                 width: auto;
-                margin-top: 23px;
+                margin-top: 27px;
                 margin-bottom: 12px;
                 margin-left: 21px;
                 margin-right: 15px;
                 font-size: 1.3em;  
+            }
+            @include tablette {
+                margin-top: 23px;
+            }
+            @include desktop {
+                margin-top: 30px;
             }
         }
         .header__flex--titre{
@@ -32,8 +54,11 @@ header{
                 display: block;
                 height: auto;
                 width: 60%;
-                
-            } 
+                @include desktop{
+                    width: 45%;
+                } 
+            }
+           
         }
     }
 }
@@ -43,11 +68,27 @@ footer {
     display: flex;
     flex-direction: column;
     background-color: rgb(53, 53, 53);
+    @include desktop{
+        flex-direction: row;
+
+    }
+    @include tablette{
+        flex-direction: row;
+        width: 100%;
+    }
     .footer__logo {
         height: auto;
         width: 100%;
         display: flex;
         align-items: center;
+        @include desktop{
+            width: 20%;
+            margin-top: -20px;
+        }
+        @include tablette{
+            width: 30%;
+            margin-top: -90px;
+        }
         h3 {
             color: white;
             font-family: Shrikhand;
@@ -60,6 +101,20 @@ footer {
         list-style: none;
         margin-left: -15px;
         margin-top: -5px;
+        @include desktop{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            li {
+                margin-right: 50px;
+            }
+        }
+        @include tablette{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-left: 50px;
+        }
         .fas {
             margin-right: 10px;
 
@@ -78,12 +133,14 @@ footer {
         }
         a {
             text-decoration: none;
-            color: white;
+            color: white !important;
             font-size: 1.3em;
             
         }
         li:nth-child(4) {
             margin-top: 3px;
+            
+            
         }
     }
 }

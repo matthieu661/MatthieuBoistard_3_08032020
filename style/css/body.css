@@ -20,11 +20,21 @@ a:visited {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin :0;
+    
+    margin :auto;
     width: 375px;
     border: aqua 2px solid;
     
   }
+}
+@media (min-width: 651px) and(max-width : 1150px) {
+  body {
+    margin: auto ;
+    display: flex;
+    justify-content: center;
+    
+  }
+  
 }
 
 /*# sourceMappingURL=body.css.map */
