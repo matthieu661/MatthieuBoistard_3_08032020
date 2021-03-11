@@ -1,22 +1,41 @@
 $background-majeur : rgb(246, 246, 246);
+$background-bouton : linear-gradient(to bottom right,rgb(246, 130, 229), rgb(145, 63, 207) );
 @mixin box-shadow-bas {
     box-shadow: 0px 6px 7px rgb(202, 202, 202);
     } 
 
-    @keyframes fadein {
-        from {
-            opacity:0;
-        }
-        to {
-            opacity:1;
-        }
+@keyframes fadein {
+    from {
+        opacity:0;
     }
-    @mixin tablette {
-        @media (min-width: 651px) and(max-width : 1150px) {@content;}
-    } 
-    @mixin desktop {
-        @media (min-width: 1151px) {@content;}
-    } 
+    to {
+        opacity:1;
+    }
+}
+   
+@mixin tablette {
+    @media (min-width: 651px) and(max-width : 1150px) {@content;}
+} 
+@mixin desktop {
+    @media (min-width: 1151px) {@content;}
+}
+@mixin buton_violet {
+
+    height: 50px;
+    width: 220px;
+    border-radius: 25px;
+    border :none ;
+    background : $background-bouton;
+    color: white;
+    font-size: 1em;
+    font-weight: 500;
+    cursor: pointer;
+    &:hover {
+        opacity: 0.8;
+        box-shadow: 0px 6px 7px rgb(144, 141, 141);
+    }  
+} 
+
 
 .flex-conteneur {
     height: auto;
@@ -157,6 +176,10 @@ $background-majeur : rgb(246, 246, 246);
                 animation: fadein 10s ;
                 animation-fill-mode: both;
             }
+            .entrees:nth-child(4){
+                animation: fadein 12s ;
+                animation-fill-mode: both;
+            }
             .plats:nth-child(1){
                 animation: fadein 15s ;
                 animation-fill-mode: both;
@@ -230,9 +253,9 @@ $background-majeur : rgb(246, 246, 246);
                 }
                 
                 h5 {
-                    margin-top: 8px;
-                    margin-bottom: 6px;
-                    margin-left: 8px;
+                    margin-top: 9px;
+                    margin-bottom: 2px;
+                    margin-left: 12px;
                     font-size: 1.2em;
                     height: 100%;
                     width: 100%;
@@ -241,7 +264,8 @@ $background-majeur : rgb(246, 246, 246);
                     text-overflow: ellipsis;
                 }
                 p {
-                    margin-left: 8px;
+                    margin-left: 12px;
+                    margin-bottom: 4px;
                     height: 100%;
                     width: 100%;
                     white-space: nowrap;
@@ -267,6 +291,7 @@ $background-majeur : rgb(246, 246, 246);
                     margin-right: 14px;
                     margin-top: 20px;
                     padding-left: 10px;
+                    font-weight: bolder;
                     
 
                 }
@@ -292,6 +317,25 @@ $background-majeur : rgb(246, 246, 246);
                     justify-content: center;   
                 }
 
+            }
+        }
+        &__bouton-violet {
+            display: flex;
+            height: 112px;
+            width: auto;
+            justify-content: center;
+            margin-top: 39px;
+            &-buton {
+                @include buton_violet;
+                @include box-shadow-bas;
+            }
+        }
+        .flex-conteneur__repas__bouton-violet-buton {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            p {
+                color: white;
             }
         }
     }

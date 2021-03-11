@@ -8,6 +8,9 @@ $color-icon-fonctionnement-2 : rgb(173, 114, 153);
 $background-nouveau : rgb(153, 226, 208);
 $color-nouveau: rgb(12, 138, 106);
 $background-bouton : linear-gradient(to bottom right,rgb(246, 130, 229), rgb(145, 63, 207) );
+$background-chargement : radial-gradient(#703386, white);
+
+
 
 @mixin tablette {
     @media (min-width: 651px) and(max-width : 1150px) {@content;}
@@ -28,7 +31,8 @@ $background-bouton : linear-gradient(to bottom right,rgb(246, 130, 229), rgb(145
     font-weight: 500;
     cursor: pointer;
     &:hover {
-        opacity: 0.7;
+        opacity: 0.8;
+        box-shadow: 0px 6px 7px rgb(144, 141, 141);
     }  
 }
 @mixin box-shadow-bas {
@@ -61,15 +65,65 @@ $background-bouton : linear-gradient(to bottom right,rgb(246, 130, 229), rgb(145
         transform: scaleX(1);
     }
 }
+@keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+@keyframes hide {
+    from {
+        z-index: 3;
+        opacity: 1;
+    }
+    30% {
+        opacity: 0.4;
+    }
+    to {
+        z-index: -1;
+        opacity: 0;
+    }
+}
 .header__flex--retour {
     display: none;
 }
+
 
 .flex-conteneur {
     width: auto;
     height: auto;
     display: flex;
     flex-direction: column;
+    &__backgroundchargement {
+        background: $background-chargement ;
+        position: absolute;
+        left: 0; top: 0;
+        width: 100%;
+        height: 2000px;
+        animation: hide 3s ;
+        animation-fill-mode: forwards;
+        &__chargement {
+            position: absolute;
+            left: 50%; top: 270px;
+            margin-left: -90px;
+            background-color: rgba(153, 226, 208, 0);
+            border-right: 30px solid rgba(255, 255, 255, 0);
+            border-top: 5px solid rgb(147, 86, 220);
+            border-bottom: 5px solid rgb(255, 120, 219);
+            border-left: 30px solid rgba(255, 255, 255, 0);
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            animation: rotate 1.5s linear ;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            p {
+                font-family: Shrikhand;
+                font-size: 2em;
+
+            }
+        
+        }
+    }
     /* Section 1 : localisation ########################################################### */
     &__localisation {
         height: auto;
@@ -177,6 +231,7 @@ $background-bouton : linear-gradient(to bottom right,rgb(246, 130, 229), rgb(145
             margin-bottom: 24px;
             @include desktop{
                 margin: 10px;
+                margin-right:30px ;
             }
         }
         li:before {

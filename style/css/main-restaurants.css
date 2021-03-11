@@ -148,6 +148,10 @@
   animation: fadein 10s;
   animation-fill-mode: both;
 }
+.flex-conteneur__repas ul .entrees:nth-child(4) {
+  animation: fadein 12s;
+  animation-fill-mode: both;
+}
 .flex-conteneur__repas ul .plats:nth-child(1) {
   animation: fadein 15s;
   animation-fill-mode: both;
@@ -216,9 +220,9 @@
   text-overflow: ellipsis;
 }
 .flex-conteneur__repas ul .li__text h5 {
-  margin-top: 8px;
-  margin-bottom: 6px;
-  margin-left: 8px;
+  margin-top: 9px;
+  margin-bottom: 2px;
+  margin-left: 12px;
   font-size: 1.2em;
   height: 100%;
   width: 100%;
@@ -227,7 +231,8 @@
   text-overflow: ellipsis;
 }
 .flex-conteneur__repas ul .li__text p {
-  margin-left: 8px;
+  margin-left: 12px;
+  margin-bottom: 4px;
   height: 100%;
   width: 100%;
   white-space: nowrap;
@@ -251,6 +256,7 @@
   margin-right: 14px;
   margin-top: 20px;
   padding-left: 10px;
+  font-weight: bolder;
 }
 .flex-conteneur__repas ul .li__animation--translate {
   display: flex;
@@ -270,6 +276,37 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.flex-conteneur__repas__bouton-violet {
+  display: flex;
+  height: 112px;
+  width: auto;
+  justify-content: center;
+  margin-top: 39px;
+}
+.flex-conteneur__repas__bouton-violet-buton {
+  height: 50px;
+  width: 220px;
+  border-radius: 25px;
+  border: none;
+  background: linear-gradient(to bottom right, #f682e5, #913fcf);
+  color: white;
+  font-size: 1em;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0px 6px 7px #cacaca;
+}
+.flex-conteneur__repas__bouton-violet-buton:hover {
+  opacity: 0.8;
+  box-shadow: 0px 6px 7px #908d8d;
+}
+.flex-conteneur__repas .flex-conteneur__repas__bouton-violet-buton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.flex-conteneur__repas .flex-conteneur__repas__bouton-violet-buton p {
+  color: white;
 }
 
 /*# sourceMappingURL=main-restaurants.css.map */

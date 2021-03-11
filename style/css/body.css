@@ -1,9 +1,9 @@
-h2, h3 {
+h2, h3, h5, h4 {
   font-family: "Roboto" ;
 }
 
 p {
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto";
   margin: 0;
 }
 a:link {
@@ -27,14 +27,12 @@ a:visited {
     
   }
 }
-@media (min-width: 651px) and(max-width : 1150px) {
+@media screen and (min-width: 651px) and(max-width : 1150px) {
   body {
     margin: auto ;
     display: flex;
     justify-content: center;
-    
-  }
-  
+  } 
 }
 
 /*# sourceMappingURL=body.css.map */
