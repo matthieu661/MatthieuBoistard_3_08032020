@@ -1,0 +1,39 @@
+&--like {
+                    
+    display: flex;
+    align-items: center;
+    width: auto;
+    height: 100%;
+    margin-right: 20px;
+    border: none;
+    .heart {
+        height: 40px;
+        border: rgba(0, 0, 0, 0);
+        outline: rgba(0, 0, 0, 0);
+        background-color: white;
+        cursor: pointer;
+        .fas {
+            position: relative;
+            left: 18px;
+            margin-top: 15px;
+            transform: scale(0);
+            transform-origin: bottom;
+            transition: 600ms;   
+        }
+        &:active .fas {
+            transform: scale(1);
+            background: -webkit-gradient(linear, left top, left bottom, from(rgb(168, 105, 223)), to(rgb(248, 212, 244)));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            z-index: 1;  
+              
+        }
+        
+    }
+    i {
+        font-size: 1.1em;
+    }
+    
+    
+}

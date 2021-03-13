@@ -1,12 +1,21 @@
-h2, h3 {
-  font-family: "Roboto" ;
+h2, h3, h5, h4 {
+  font-family: "Roboto";
 }
 
 p {
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto";
   margin: 0;
 }
 
+a:link {
+  text-decoration: none;
+  color: black;
+}
+
+a:visited {
+  text-decoration: none;
+  color: black;
+}
 
 @media screen and (max-width: 650px) {
   body {
@@ -20,11 +29,24 @@ p {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    margin :0;
-    width: 375px;
-    border: aqua 2px solid;
-    
+    margin: auto;
+    width: 100%;
+  }
+}
+@media screen and (min-width: 651px) and (max-width: 1150px) {
+  body {
+    margin: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 
-/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3Njc3MvYm9keS5zY3NzIiwiLi4vYm9keS5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDSSxzQkFBQTtBQ0NKOztBRENFO0VBQ0UsaUNBQUE7RUNFRixTQUFTO0FBQ1g7OztBQUdBO0VBQ0U7SURJSSxvQkFBQTtJQUFBLG9CQUFBO0lBQUEsYUFBQTtJQUNBLDRCQUFBO0lBQUEsNkJBQUE7UUFBQSwwQkFBQTtZQUFBLHNCQUFBO0lDRkYsd0JBQXVCO1FBQXZCLHFCQUF1QjtZQUF2Qix1QkFBdUI7SUFDdkIsU0FBUztJQUNULFlBQVk7SUFDWixzQkFBc0I7O0VBRXhCO0FBQ0YiLCJmaWxlIjoiYm9keS5jc3MifQ== */
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3Njc3MvYm9keS5zY3NzIiwiLi4vYm9keS5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxxQkFBQTtBQ0NGOztBREVBO0VBQ0UscUJBQUE7RUFDQSxTQUFBO0FDQ0Y7O0FEQ0E7RUFDRSxxQkFBQTtFQUNBLFlBQUE7QUNFRjs7QURBQTtFQUNFLHFCQUFBO0VBQ0EsWUFBQTtBQ0dGOztBREFBO0VBQ0U7SUFDRSxvQkFBQTtJQUFBLG9CQUFBO0lBQUEsYUFBQTtJQUNBLDRCQUFBO0lBQUEsNkJBQUE7UUFBQSwwQkFBQTtZQUFBLHNCQUFBO0lBQ0Esd0JBQUE7UUFBQSxxQkFBQTtZQUFBLHVCQUFBO0lBQ0EsWUFBQTtJQUNBLFdBQUE7RUNHRjtBQUNGO0FEQ0E7RUFDRTtJQUNFLFlBQUE7SUFDQSxvQkFBQTtJQUFBLG9CQUFBO0lBQUEsYUFBQTtJQUNBLHdCQUFBO1FBQUEscUJBQUE7WUFBQSx1QkFBQTtJQUNBLDRCQUFBO0lBQUEsNkJBQUE7UUFBQSwwQkFBQTtZQUFBLHNCQUFBO0VDQ0Y7QUFDRiIsImZpbGUiOiJib2R5LmNzcyJ9 */
