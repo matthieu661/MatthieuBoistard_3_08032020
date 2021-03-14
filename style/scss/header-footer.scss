@@ -56,6 +56,7 @@ header{
                 width: 60%;
                 @include desktop{
                     width: 45%;
+                    max-width: 680px;
                 } 
             }
            
@@ -70,11 +71,13 @@ footer {
     background-color: rgb(53, 53, 53);
     @include desktop{
         flex-direction: row;
+        align-items: center;
 
     }
     @include tablette{
-        flex-direction: row;
+        
         width: 100%;
+        
     }
     .footer__logo {
         height: auto;
@@ -87,7 +90,7 @@ footer {
         }
         @include tablette{
             width: 30%;
-            margin-top: -90px;
+            margin-top: -10px;
         }
         h3 {
             color: white;
@@ -104,16 +107,25 @@ footer {
         @include desktop{
             display: flex;
             justify-content: center;
-            align-items: center;
+           
+            
             li {
-                margin-right: 100px;
+                margin-right: 70px;
+                
             }
         }
         @include tablette{
             display: flex;
-            flex-direction: column;
+            flex-wrap: wrap;
+            align-items: center;
             justify-content: center;
-            margin-left: 300px;
+            
+            height: 200px;
+            li {
+                margin: 15px;
+                align-items: center;
+            }
+            
         }
         .fas {
             margin-right: 10px;
@@ -139,6 +151,9 @@ footer {
         }
         li:nth-child(4) {
             margin-top: 3px;
+            @include tablette {
+                margin-top: 16px;
+            }
             
             
         }

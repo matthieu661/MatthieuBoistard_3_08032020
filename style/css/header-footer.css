@@ -59,6 +59,7 @@ header .header__flex .header__flex--titre img {
 @media (min-width: 1151px) {
   header .header__flex .header__flex--titre img {
     width: 45%;
+    max-width: 680px;
   }
 }
 
@@ -72,11 +73,11 @@ footer {
 @media (min-width: 1151px) {
   footer {
     flex-direction: row;
+    align-items: center;
   }
 }
 @media (min-width: 651px) and (max-width: 1150px) {
   footer {
-    flex-direction: row;
     width: 100%;
   }
 }
@@ -95,7 +96,7 @@ footer .footer__logo {
 @media (min-width: 651px) and (max-width: 1150px) {
   footer .footer__logo {
     width: 30%;
-    margin-top: -90px;
+    margin-top: -10px;
   }
 }
 footer .footer__logo h3 {
@@ -114,18 +115,22 @@ footer ul {
   footer ul {
     display: flex;
     justify-content: center;
-    align-items: center;
   }
   footer ul li {
-    margin-right: 100px;
+    margin-right: 70px;
   }
 }
 @media (min-width: 651px) and (max-width: 1150px) {
   footer ul {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
     justify-content: center;
-    margin-left: 300px;
+    height: 200px;
+  }
+  footer ul li {
+    margin: 15px;
+    align-items: center;
   }
 }
 footer ul .fas {
@@ -149,6 +154,11 @@ footer ul a {
 }
 footer ul li:nth-child(4) {
   margin-top: 3px;
+}
+@media (min-width: 651px) and (max-width: 1150px) {
+  footer ul li:nth-child(4) {
+    margin-top: 16px;
+  }
 }
 
 /*# sourceMappingURL=header-footer.css.map */

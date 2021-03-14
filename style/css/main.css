@@ -291,11 +291,11 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    width: 1000px;
+    width: 1150px;
   }
   .flex-conteneur__restaurants__porte-carte a {
     height: 320px;
-    width: 400px;
+    width: 500px;
     flex: 1 0 50%;
     display: flex;
     align-items: center;
@@ -325,9 +325,8 @@
 }
 @media (min-width: 1151px) {
   .flex-conteneur__restaurants__carte {
-    width: 400px;
+    width: 500px;
     height: 320px;
-    margin: 20px;
   }
 }
 .flex-conteneur__restaurants__carte--image {
@@ -342,9 +341,8 @@
 }
 @media (min-width: 1151px) {
   .flex-conteneur__restaurants__carte--image {
-    width: 400px;
+    width: 500px;
     height: 230px;
-    margin-right: 60px;
   }
 }
 .flex-conteneur__restaurants__carte--image img {
@@ -379,7 +377,7 @@
   .flex-conteneur__restaurants__carte--image--nouveau {
     position: relative;
     top: -210px;
-    left: 300px;
+    left: 390px;
   }
 }
 .flex-conteneur__restaurants__carte--description {
@@ -398,7 +396,7 @@
 }
 @media (min-width: 1151px) {
   .flex-conteneur__restaurants__carte--description {
-    width: 400px;
+    width: 500px;
   }
 }
 .flex-conteneur__restaurants__carte--description--nom-restaurants {

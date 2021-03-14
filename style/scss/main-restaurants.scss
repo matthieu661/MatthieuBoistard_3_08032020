@@ -101,7 +101,7 @@ $background-bouton : linear-gradient(to bottom right,rgb(246, 130, 229), rgb(145
                 margin-top: 25px;
                 margin-right: 30px;
                 background: rgb(246, 246, 246);
-                z-index: 2;
+                z-index: 1;
                 position: relative;
                 &--heart {
                     width: 20px;
@@ -115,7 +115,8 @@ $background-bouton : linear-gradient(to bottom right,rgb(246, 130, 229), rgb(145
                     cursor: pointer;
                     &::before {
                         opacity: 0;
-                        transition: 1s;
+                        transform: scale(0);
+                        transform-origin: bottom;
                         content: "";
                         position: absolute;
                         top: 0;
@@ -129,13 +130,16 @@ $background-bouton : linear-gradient(to bottom right,rgb(246, 130, 229), rgb(145
                     }
                     &:active::before {
                         opacity: 1;
+                        transform: scale(1);
+                        transition: .5s;
                         /*z-index: 1; pk çà bloque la forme du coeur !!!!!*/   
                     }   
                 }
                 .vide:active {
                     opacity: 0;
-                    transition: 0.25s;
+                    transition: .5s;
                 }
+                
 
                 i{
                     mix-blend-mode:lighten;

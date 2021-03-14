@@ -310,15 +310,16 @@ $background-chargement : radial-gradient(#703386, white);
                 flex-direction: row;
                 justify-content: center;
                 align-items: center;
-                width: 1000px;
+                width: 1150px;
                 a {
                     height: 320px;
-                    width: 400px;
+                    width: 500px;
                     flex : 1 0 50%;
                     display: flex;
                     align-items: center;
                     justify-content: center;
                     margin-bottom: 20px;
+                    
                 }          
             }
         }
@@ -339,9 +340,9 @@ $background-chargement : radial-gradient(#703386, white);
                 height: 320px;
             }
             @include desktop{
-                width: 400px;
+                width: 500px;
                 height: 320px;
-                margin: 20px;
+                
             }
             &--image {
                 width: 335px;
@@ -351,9 +352,9 @@ $background-chargement : radial-gradient(#703386, white);
                     height: 230px;
                 }
                 @include desktop{
-                    width: 400px;
+                    width: 500px;
                     height: 230px;
-                    margin-right: 60px;
+                    
                     
                 }
                 
@@ -382,7 +383,7 @@ $background-chargement : radial-gradient(#703386, white);
                     }
                     @include desktop {
                         position: relative;
-                        top: -210px; left: 300px;
+                        top: -210px; left: 390px;
                     }
                 }
             }
@@ -393,7 +394,7 @@ $background-chargement : radial-gradient(#703386, white);
                     width: 400px;
                 }
                 @include desktop{
-                    width: 400px;
+                    width: 500px;
                 }
                 background: white;
                 display: flex;
