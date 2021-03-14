@@ -2,6 +2,7 @@
 @keyframes fadein {
   from {
     opacity: 0;
+    background: rgba(246, 130, 229, 0.315);
   }
   to {
     opacity: 1;
@@ -171,7 +172,7 @@
   }
 }
 .flex-conteneur__repas ul .entrees:nth-child(1) {
-  animation: fadein 4s;
+  animation: fadein 4s ease-in;
   animation-fill-mode: both;
 }
 .flex-conteneur__repas ul .entrees:nth-child(2) {

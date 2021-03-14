@@ -7,9 +7,12 @@ $background-bouton : linear-gradient(to bottom right,rgb(246, 130, 229), rgb(145
 @keyframes fadein {
     from {
         opacity:0;
+        background:rgba(246, 130, 229, 0.315) ;
     }
+    
     to {
         opacity:1;
+
     }
 }
    
@@ -198,7 +201,7 @@ $background-bouton : linear-gradient(to bottom right,rgb(246, 130, 229), rgb(145
             }
             
             .entrees:nth-child(1){
-                animation: fadein 4s ;
+                animation: fadein 4s ease-in;
                 animation-fill-mode: both;
                 
             }
