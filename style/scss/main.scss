@@ -367,7 +367,7 @@ $background-chargement : radial-gradient(#703386, white);
             opacity : 1;
         }
         &__carte {
-            opacity: 0.8;
+            opacity: 0.7;
             width: 335px;
             height: 250px;
             margin-bottom: 12px;
@@ -386,11 +386,11 @@ $background-chargement : radial-gradient(#703386, white);
                 height: 175px;
                 @include tablette{
                     width: 400px;
-                    height: 230px;
+                    height: 245px;
                 }
                 @include desktop{
                     width: 500px;
-                    height: 230px;
+                    height: 245px;
                     
                     
                 }
