@@ -42,6 +42,9 @@ $background-chargement : radial-gradient(#703386, white);
 @mixin box-shadow-bas {
     box-shadow: 0px 6px 7px rgb(202, 202, 202);
     }  
+@mixin box-shadow-bas-hover {
+    box-shadow: 0px 6px 7px rgba(63, 23, 57, 0.315);
+} 
 
 @mixin list_rond {
     background:$color-icon-fonctionnement-2;
@@ -61,18 +64,28 @@ $background-chargement : radial-gradient(#703386, white);
     
 }
 
-@keyframes heart{
-    from {
-        transform: scaleX(0);   
-    }
-    to {
-        transform: scaleX(1);
-    }
-}
+
 @keyframes rotate {
-    0% { transform: rotate(0deg); z-index: 4;}
-    100% { transform: rotate(360deg) ;z-index: 4; }
+    0% { 
+        transform: rotate(0deg); z-index: 4;
+    }
+    30% {
+        transform: rotate(60deg); z-index: 4;
+    }
+    40% {
+        transform: rotate(70deg); z-index: 4;
+    }
+    50% {
+        transform: rotate(75deg); z-index: 4;
+    }
+    70% {
+        transform: rotate(80deg); z-index: 4;
+    }
+    100% { 
+        transform: rotate(360deg) ;z-index: 4; 
+    }
   }
+  
 @keyframes hide {
     0% {
         z-index: 3;
@@ -87,6 +100,21 @@ $background-chargement : radial-gradient(#703386, white);
         opacity: 0;
     }
 }
+
+@keyframes heart {
+    0% {
+      transform : scale(0);
+      fill: url(#grad2);
+      stroke : transparent ;
+      
+    }
+    100% { 
+      transform :scale(1);
+      stroke : transparent ;
+       
+    }
+  }  
+
 .header__flex--retour {
     display: none;
 }
@@ -305,6 +333,8 @@ $background-chargement : radial-gradient(#703386, white);
             display: flex;
             align-items: center;
             flex-direction: column;
+              
+            
             @include desktop{
                 flex-wrap: wrap;
                 flex-direction: row;
@@ -323,6 +353,7 @@ $background-chargement : radial-gradient(#703386, white);
                 }          
             }
         }
+
         &--margin {
             height: 60px;
             width: 100%;
@@ -330,11 +361,17 @@ $background-chargement : radial-gradient(#703386, white);
                 align-self: center;
             }
         }
+        .flex-conteneur__restaurants__carte:hover {
+            transition: 0.5s;
+            @include box-shadow-bas-hover;
+            opacity : 1;
+        }
         &__carte {
-            
+            opacity: 0.8;
             width: 335px;
             height: 250px;
             margin-bottom: 12px;
+            border-radius: 20px; 
             @include tablette{
                 width: 400px;
                 height: 320px;
@@ -417,63 +454,35 @@ $background-chargement : radial-gradient(#703386, white);
                 }
                 
             }
-            &--like { 
-                display: flex;
-                height: 20px;
-                width: 20px;
-                margin-top: 25px;
-                margin-right: 30px;
-                background: white;
-                z-index: 2;
-                position: relative;
-                &--heart {
-                    width: 20px;
-                    height: 20px;
-                    position: relative;
-                    padding: 0;
-                    left: 0; top: 0;
-                    border: rgba(0, 0, 0, 0);
-                    outline: rgba(0, 0, 0, 0);
-                    background-color: black;
-                    cursor: pointer;
-                    &::before {
-                        opacity: 0;
-                        transition: 1s;
-                        content: "";
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        height: 100%;
-                        width: 100%;
-                        background: linear-gradient(10deg, rgb(246, 130, 229) 50%,rgb(145, 63, 207) 100%);
-                        
-                        
-                          
-                    }
-                    &:active::before {
-                        opacity: 1;
-                        /*z-index: 1; pk çà bloque la forme du coeur !!!!!*/   
-                    }   
+            .container {
+                opacity :0.5;
+                display:flex;
+                width: 50px;
+                justify-content:center;
+                align-items: center;
+                color: BLACK;
+                .icon {
+                  width : 20px
                 }
-                .vide:active {
-                    opacity: 0;
-                }
-
-                i{
-                    mix-blend-mode:lighten;
-                    opacity: 1;
-                    background-color:white;
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    height: 100%;
-                    width: 100%;
-                    display:flex;
-                    align-items:center;
-                    justify-content:center;
-                    font-size: 1.4em;
-                }
-            }    
+                
+            }
+              
+            path {
+                fill :transparent;
+                stroke-width :20;
+                stroke : black;
+            }
+              
+              
+            .container:hover svg * {
+                  animation : heart 0.5s ;
+                  transform-origin : bottom;
+                  animation-fill-mode : forwards;
+                  fill: url(#grad2);
+                  
+                
+            }
+              
             
         }
 

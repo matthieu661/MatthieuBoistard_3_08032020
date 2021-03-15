@@ -132,3 +132,46 @@
     
     
 }
+
+body{
+    background: WHITE;
+  }
+  .container {
+    opacity :1;
+    display:flex;
+    justify-content:center;
+    color: BLACK;
+  
+    
+  }
+  .icon {
+    width : 40px
+  }
+  path {
+    fill :transparent;
+    stroke-width :20;
+    stroke : black;
+  }
+  
+  
+  .container:active svg * {
+      animation : heart 0.5s ;
+      transform-origin : bottom;
+      animation-fill-mode : forwards;
+      fill: url(#grad2);
+      
+    
+    }
+  @keyframes heart {
+    0% {
+      transform : scale(0);
+      fill: url(#grad2);
+      stroke : transparent ;
+      
+    }
+    100% { 
+      trasform :scale(1);
+      stroke : transparent ;
+       
+    }
+  }
