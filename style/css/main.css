@@ -334,7 +334,7 @@
   transition: 0.5s;
   box-shadow: 0px 6px 7px rgba(121, 43, 109, 0.514);
   opacity: 1;
-  transform: scale(101%);
+  transform: scale(1.01);
 }
 .flex-conteneur__restaurants__carte {
   opacity: 0.7;
