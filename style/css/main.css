@@ -41,7 +41,6 @@
 @keyframes heart {
   0% {
     transform: scale(0);
-    fill: url(#grad2);
     stroke: transparent;
   }
   100% {
@@ -460,6 +459,15 @@
   transform-origin: bottom;
   animation-fill-mode: forwards;
   fill: url(#grad2);
+}
+.flex-conteneur__restaurants__carte .back {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: radial-gradient(circle, #833ab4 0%, #fd1d1d 50%, #fcb045 100%);
+  clip-path: url(#clip);
 }
 
 /*# sourceMappingURL=main.css.map */

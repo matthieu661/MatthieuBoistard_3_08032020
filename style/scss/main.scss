@@ -104,7 +104,6 @@ $background-chargement : radial-gradient(#703386, white);
 @keyframes heart {
     0% {
       transform : scale(0);
-      fill: url(#grad2);
       stroke : transparent ;
       
     }
@@ -113,7 +112,8 @@ $background-chargement : radial-gradient(#703386, white);
       stroke : transparent ;
        
     }
-  }  
+  }
+    
 
 .header__flex--retour {
     display: none;
@@ -483,9 +483,18 @@ $background-chargement : radial-gradient(#703386, white);
                   
                 
             }
-              
+            .back {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                 background: radial-gradient(circle, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+                clip-path: url(#clip);
+            }  
             
         }
+        
 
         
 
