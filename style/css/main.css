@@ -458,7 +458,7 @@
   animation: heart 0.5s;
   transform-origin: bottom;
   animation-fill-mode: forwards;
-  fill: url(#grad2);
+  fill: #913fcf;
 }
 
 /*# sourceMappingURL=main.css.map */
