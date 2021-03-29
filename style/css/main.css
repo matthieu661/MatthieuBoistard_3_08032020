@@ -232,7 +232,7 @@
 }
 .flex-conteneur__fonctionnement li:before {
   content: counter(nombre);
-  background: #ad7299;
+  background: #9356dc;
   border-radius: 50%;
   padding-left: 8px;
   padding-right: 8px;
@@ -265,7 +265,7 @@
   background: #f5edff;
 }
 .flex-conteneur__fonctionnement .background-purple i {
-  color: #ad7299;
+  color: #9356dc;
 }
 .flex-conteneur__restaurants {
   background: #f6f6f6;

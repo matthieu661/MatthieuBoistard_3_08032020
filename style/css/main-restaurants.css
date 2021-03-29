@@ -197,13 +197,17 @@
   overflow: hidden;
   cursor: pointer;
 }
-.flex-conteneur__repas ul li :active + .li__animation {
+.flex-conteneur__repas ul li :hover + .li__animation {
   transform: translate(-64px);
   transition: 0.7s;
 }
-.flex-conteneur__repas ul li :active + .li__animation .li__animation--rotate {
+.flex-conteneur__repas ul li :hover + .li__animation .li__animation--rotate {
   transform: rotate(360deg);
   transition: 0.7s;
+}
+.flex-conteneur__repas ul li .li__animation {
+  transform: translate(0px);
+  transition: 1s;
 }
 .flex-conteneur__repas ul li:hover {
   box-shadow: 0px 6px 7px rgba(63, 23, 57, 0.315);
@@ -215,7 +219,7 @@
   min-width: 300px;
   flex-shrink: 1;
 }
-.flex-conteneur__repas ul .li__text:active p {
+.flex-conteneur__repas ul .li__text:hover p {
   transition: 0.6s;
   width: 75%;
   height: 100%;
@@ -223,7 +227,7 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.flex-conteneur__repas ul .li__text:active h5 {
+.flex-conteneur__repas ul .li__text:hover h5 {
   transition: 0.5s;
   width: 75%;
   height: 100%;
